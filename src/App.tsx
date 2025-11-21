@@ -1,9 +1,10 @@
 import './App.css'
+import PixelartGallery from './components/PixelartGallery'
 
 function App() {
   return (
     <>
-      <div>Em construção</div>
+      <PixelartGallery />
     </>
   )
 }
