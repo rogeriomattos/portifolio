@@ -29,7 +29,7 @@ const PixelartGallery = () => {
                 {pixelartList.map((art) => (
                     <div key={art.id} className="pixel-art-item" onClick={() => openModal(art.image, art.name, art.description, art.pallette)}>
                         <img src={art.image} alt={art.name} />
-                        <p>{art.name}</p> 
+                        <p>{`${art.id} - ${art.name}`}</p> 
                     </div>
                 ))}
             </div>
