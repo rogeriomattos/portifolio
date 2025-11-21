@@ -8,7 +8,7 @@ export const pixelartList = [
         name: 'Flower',
         image: pixelarts['/src/assets/pixelart/0001_flower.png'],
         description: 'A beautiful pixel art flower.',
-        pallette: palettes['/src/assets/palettes/seafoam-32x.png']
+        pallette: undefined
     },
     {
         id: '0002',
@@ -22,14 +22,14 @@ export const pixelartList = [
         name: 'Candle',
         image: pixelarts['/src/assets/pixelart/0003_candle.png'],
         description: 'A glowing candle in pixel art.',
-        pallette: palettes['/src/assets/palettes/pico-8-32x.png']
+        pallette: undefined
     },
     {
         id: '0004',
         name: 'Night House',
         image: pixelarts['/src/assets/pixelart/0004_night_house.png'],
         description: 'A cozy house at night.',
-        pallette: palettes['/src/assets/palettes/pico-8-32x.png']
+        pallette: palettes['/src/assets/palettes/berry-nebula-32x.png']
     },
     {
         id: '0005',
