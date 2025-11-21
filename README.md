@@ -1,73 +1,107 @@
-# React + TypeScript + Vite
+# Portfolio - Rogerio Mattos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio pessoal desenvolvido com React, TypeScript e Vite, apresentando uma galeria de pixel arts com visualização interativa.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - Biblioteca para construção de interfaces
+- **TypeScript** - Tipagem estática para JavaScript
+- **Vite** - Build tool e dev server ultra rápido
+- **CSS3** - Estilização com Grid e animações
 
-## React Compiler
+## ✨ Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📱 Layout responsivo (mobile e desktop)
+- 🎨 Galeria de pixel arts com grid adaptativo
+- 🔍 Modal de visualização ampliada ao clicar nas artes
+- 🎭 Efeitos hover com transições suaves
+- 🖼️ Renderização pixelada para manter qualidade das artes
+- 📦 Imports dinâmicos de imagens usando Vite glob
 
-## Expanding the ESLint configuration
+## 📦 Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Clone o repositório
+git clone https://github.com/rogeriomattos/portifolio.git
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Entre na pasta do projeto
+cd portifolio
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Instale as dependências
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎮 Executando o Projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Modo de desenvolvimento
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+O projeto estará disponível em `http://localhost:5173`
+
+### Build para produção
+
+```bash
+npm run build
+```
+
+Os arquivos otimizados serão gerados na pasta `dist/`
+
+### Preview da build
+
+```bash
+npm run preview
+```
+
+Visualize a versão de produção localmente antes do deploy
+
+## 🌐 Deploy
+
+O projeto está configurado para deploy automático no GitHub Pages através de GitHub Actions.
+
+A cada push na branch `main`, o workflow:
+1. Instala as dependências
+2. Faz o build do projeto
+3. Publica automaticamente no GitHub Pages
+
+**URL do projeto:** https://rogeriomattos.github.io/portfolio
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── assets/          # Imagens e paletas de cores
+│   ├── pixelart/    # Pixel arts da galeria
+│   └── palettes/    # Paletas de cores
+├── components/      # Componentes React
+│   └── PixelartGallery/
+├── data/            # Dados estáticos
+│   └── pixelartList.ts
+└── types/           # Tipos TypeScript
+```
+
+## 🎨 Adicionando Novas Pixel Arts
+
+1. Adicione a imagem em `src/assets/pixelart/`
+2. Adicione a paleta em `src/assets/palettes/` (se necessário)
+3. Atualize o array em `src/data/pixelartList.ts`:
+
+```typescript
+{
+    id: '0008',
+    name: 'Nome da Arte',
+    image: pixelarts['/src/assets/pixelart/sua_imagem.png'],
+    description: 'Descrição da arte',
+    pallette: palettes['/src/assets/palettes/paleta.png']
+}
+```
+
+## 📄 Licença
+
+Este projeto é pessoal e está disponível para referência.
+
+---
+
+Desenvolvido por [Rogerio Mattos](https://github.com/rogeriomattos)
