@@ -1,8 +1,9 @@
 .footer {
-    background: #f5f5f5;
+    background: var(--footer-bg);
     padding: 2rem 1rem;
     margin-top: auto;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--footer-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .footer-content {
@@ -25,14 +26,14 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #1a1a1a;
+    color: var(--text-primary);
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .footer-link:hover {
-    color: #646cff;
+    color: var(--hover-color);
     transform: translateY(-2px);
 }
 
@@ -45,10 +46,11 @@
     width: 24px;
     height: 24px;
     object-fit: contain;
+    filter: var(--icon-filter, none);
 }
 
 .footer-text {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.875rem;
     margin: 0;
     text-align: center;
