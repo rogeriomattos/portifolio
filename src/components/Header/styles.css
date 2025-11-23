@@ -1,0 +1,43 @@
+.header {
+    background: var(--bg-secondary);
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    color: var(--text-primary);
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+.header-bio {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 2rem 1rem;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .header-bio {
+        font-size: 1rem;
+    }
+}
