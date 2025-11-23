@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { pixelartList } from "@/data/pixelartList";
+import PixelartModal from '@/components/PixelartModal/PixelartModal';
 import './styles.css';
 
 interface SelectedArt {
@@ -35,20 +36,13 @@ const PixelartGallery = () => {
             </div>
 
             {selectedImage && (
-                <div className="modal" onClick={closeModal}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <span className="modal-close" onClick={closeModal}>&times;</span>
-                        <img src={selectedImage.image} alt={selectedImage.name} />
-                        <h3>{selectedImage.name}</h3>
-                        <p>{selectedImage.description}</p>
-                        {selectedImage.pallette && (
-                        <div className="modal-palette">
-                            <h4>Palette</h4>
-                            <img src={selectedImage.pallette} alt={`${selectedImage.name} Palette`} />
-                        </div>
-                        )}
-                    </div>
-                </div>
+                <PixelartModal
+                    image={selectedImage.image}
+                    name={selectedImage.name}
+                    description={selectedImage.description}
+                    pallette={selectedImage.pallette}
+                    onClose={closeModal}
+                />
             )}
         </div>
     )
