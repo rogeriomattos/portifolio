@@ -1,16 +1,40 @@
 .pixelart-gallery {
     position: relative;
+    padding: 3rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .pixelart-gallery-text {
-   text-align: left;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.pixelart-gallery-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.pixelart-gallery-text h1::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
 }
 
 .pixel-art-carrousel {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    gap: .5rem;
+    gap: 1.5rem;
     padding: 0;
 }
 
@@ -24,12 +48,22 @@
     flex: 1 1 100%;
     position: relative;
     cursor: pointer;
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+}
+
+.pixel-art-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow-hover);
 }
 
 @media (min-width: 768px) {
     .pixel-art-item {
         flex: 1 1 auto;
-        max-width: calc((100% / 4));
+        max-width: calc((100% / 4) - 1.125rem);
     }
 }
 
@@ -37,7 +71,12 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 4px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.pixel-art-item:hover img {
+    transform: scale(1.05);
 }
 
 .pixel-art-item p {
