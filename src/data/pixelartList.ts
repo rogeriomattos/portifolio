@@ -43,7 +43,7 @@ export const pixelartList = [
         name: 'Ladybird',
         image: pixelarts['/src/assets/pixelart/0002_ladybird.png'],
         description: 'Minha segunda arte, depois que eu aprendi um pouco mais de noções de cores.',
-        pallette: palettes['/src/assets/palettes/berry-nebula-32x.png']
+        pallette: undefined
     },
     {
         id: '0001',
